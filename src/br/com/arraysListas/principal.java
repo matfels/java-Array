@@ -14,6 +14,9 @@ public class principal  {
 //		usuario1.listpessoas(usuario3);
 //		usuario1.getpessoas();
 		
-		listasEncadeadas.encadeadas();
+//		listasEncadeadas.encadeadas();
+
+//		listas.listasFor();
+		listasEncadeadas.getfirst();
 	}
 }
