@@ -30,7 +30,7 @@ public class filaPrioridade {
 		
 		System.out.println("\nFila de prioridade: ");
 		while(!filaPrioridade.isEmpty()) {
-			System.out.println(filaPrioridade.poll().nome);
+			System.out.println(filaPrioridade.poll());
 		}
 	}
 	
@@ -39,18 +39,32 @@ public class filaPrioridade {
 		
 	}
 	
-class pessoaas Comparable<pessoaas>{
+class pessoaas implements Comparable<pessoaas>{
 	String nome;
 	boolean fila;
 	public pessoaas(String nome, boolean fila) {
 		this.nome = nome;
 		this.fila = fila;
 	}
-	public int comparaTo(pessoaas outraPessoa) {
-		if this.temPrioridade && !outraPessoa.temPrioridade){
-			
+	
+	@Override
+	public int compareTo(pessoaas outraPessoa) {
+		if (this.fila && !outraPessoa.fila){
+			System.out.println("loop1");
+			return -1;
+		} else if (!this.fila && outraPessoa.fila) {
+			System.out.println("loop2");
+			return 1;
 		}
+		System.out.println("Fiora do loop");
+		return  this.nome.compareTo(outraPessoa.nome);
+		
 		
 	}
+//	@Override
+//	public int compareTo(pessoaas outraPessoa) {
+//		// TODO Auto-generated method stub
+//		return 0;
+//	}
 
 }
