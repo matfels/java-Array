@@ -6,8 +6,8 @@ import java.util.PriorityQueue;
 public class filaPrioridade {
 
 	// fila comum
-	LinkedList<String> filaComum = new LinkedList<>();
-	public void listafila() {
+	public static void listafila() {
+		LinkedList<String> filaComum = new LinkedList<>();
 		filaComum.add("Geronimo");
 		filaComum.add ("Sicero");
 		filaComum.add ("Isaltina");
@@ -30,7 +30,7 @@ public class filaPrioridade {
 		
 		System.out.println("\nFila de prioridade: ");
 		while(!filaPrioridade.isEmpty()) {
-			System.out.println(filaPrioridade.poll());
+			System.out.println(filaPrioridade.poll().nome);
 		}
 	}
 	
@@ -42,7 +42,7 @@ public class filaPrioridade {
 class pessoaas implements Comparable<pessoaas>{
 	String nome;
 	boolean fila;
-	public pessoaas(String nome, boolean fila) {
+	pessoaas(String nome, boolean fila) {
 		this.nome = nome;
 		this.fila = fila;
 	}
@@ -50,21 +50,13 @@ class pessoaas implements Comparable<pessoaas>{
 	@Override
 	public int compareTo(pessoaas outraPessoa) {
 		if (this.fila && !outraPessoa.fila){
-			System.out.println("loop1");
 			return -1;
 		} else if (!this.fila && outraPessoa.fila) {
-			System.out.println("loop2");
+
 			return 1;
 		}
-		System.out.println("Fiora do loop");
 		return  this.nome.compareTo(outraPessoa.nome);
 		
-		
 	}
-//	@Override
-//	public int compareTo(pessoaas outraPessoa) {
-//		// TODO Auto-generated method stub
-//		return 0;
-//	}
 
 }

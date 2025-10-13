@@ -5,7 +5,7 @@ import java.util.Iterator;
 import java.util.LinkedList;
 
 public class listasEncadeadas {
-	public static void encadeadas() {
+	public void encadeadas() {
 		List<String> nomelist = new LinkedList<>();
 		nomelist.add("Solange");
 		nomelist.add("Danubia");
@@ -21,7 +21,7 @@ public class listasEncadeadas {
 		
 	}
 	
-	public static void getfirst() {
+	public void getfirst() {
 		LinkedList<String> lista2 = new LinkedList<>();
 		lista2.add("João");
 		lista2.add("Antonio");

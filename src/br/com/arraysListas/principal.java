@@ -18,7 +18,8 @@ public class principal  {
 
 //		listas.listasFor();
 //		listasEncadeadas.getfirst();
-		pessoaas vovo = new pessoaas("Lucelia", true);
-		System.out.println(vovo.compareTo(vovo));
+//		pessoaas vovo = new pessoaas("Lucelia", true);
+//		System.out.println(vovo.compareTo(vovo));
+		filaPrioridade.listafila();
 	}
 }
